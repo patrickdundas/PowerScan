@@ -12,7 +12,8 @@ powershell .\program/3check-registry-elevation.ps1 > logs/3check-registry-elevat
 Write-Host "Logging final deep search" -ForegroundColor Yellow
 powershell .\program/4finalsearch.ps1 > logs/4finalsearch.log
 
+$wshell = New-Object -ComObject Wscript.Shell
 
-
+$wshell.Popup("Process complete.",0,"Finished",0x1)
 
 pause
